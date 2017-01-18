@@ -4,7 +4,7 @@ Super basic type checking functions in ruby.
 
 ## Usage
 
-```
+```ruby
 module Type
   include Kinda.module
 end
@@ -23,7 +23,7 @@ In addition to any normal Ruby class the following custom types are available.
 * False
 * Bool
 
-```
+```ruby
 Type[Bool].call(true)
 # => true
 
@@ -36,7 +36,7 @@ Type[Bool].call(nil)
 
 New types can also be defined in terms of existing types.
 
-```
+```ruby
 require 'bigdecimal'
 
 Decimal = [BigDecimal, Float]
